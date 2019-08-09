@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/snake.dir/getchar.c.o CMakeFiles/snake.dir/main.c.o CMakeFiles/snake.dir/snake.c.o  -o snake -lpthread 
