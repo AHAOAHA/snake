@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/ahaoozhang/dev_code/snake/src/getchar.c
+/home/ahaoozhang/dev_code/snake/src/getchar.cpp
 snake.h
 /home/ahaoozhang/dev_code/snake/src/snake.h
 
-/home/ahaoozhang/dev_code/snake/src/main.c
+/home/ahaoozhang/dev_code/snake/src/main.cpp
 snake.h
 /home/ahaoozhang/dev_code/snake/src/snake.h
 
-/home/ahaoozhang/dev_code/snake/src/snake.c
+/home/ahaoozhang/dev_code/snake/src/snake.cpp
 snake.h
 /home/ahaoozhang/dev_code/snake/src/snake.h
 

@@ -57,93 +57,93 @@ include CMakeFiles/snake.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/snake.dir/flags.make
 
-CMakeFiles/snake.dir/getchar.c.o: CMakeFiles/snake.dir/flags.make
-CMakeFiles/snake.dir/getchar.c.o: /home/ahaoozhang/dev_code/snake/src/getchar.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ahaoozhang/dev_code/snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/snake.dir/getchar.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/snake.dir/getchar.c.o   -c /home/ahaoozhang/dev_code/snake/src/getchar.c
+CMakeFiles/snake.dir/getchar.cpp.o: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/getchar.cpp.o: /home/ahaoozhang/dev_code/snake/src/getchar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ahaoozhang/dev_code/snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/snake.dir/getchar.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/snake.dir/getchar.cpp.o -c /home/ahaoozhang/dev_code/snake/src/getchar.cpp
 
-CMakeFiles/snake.dir/getchar.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/snake.dir/getchar.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ahaoozhang/dev_code/snake/src/getchar.c > CMakeFiles/snake.dir/getchar.c.i
+CMakeFiles/snake.dir/getchar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/snake.dir/getchar.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahaoozhang/dev_code/snake/src/getchar.cpp > CMakeFiles/snake.dir/getchar.cpp.i
 
-CMakeFiles/snake.dir/getchar.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/snake.dir/getchar.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ahaoozhang/dev_code/snake/src/getchar.c -o CMakeFiles/snake.dir/getchar.c.s
+CMakeFiles/snake.dir/getchar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake.dir/getchar.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahaoozhang/dev_code/snake/src/getchar.cpp -o CMakeFiles/snake.dir/getchar.cpp.s
 
-CMakeFiles/snake.dir/getchar.c.o.requires:
+CMakeFiles/snake.dir/getchar.cpp.o.requires:
 
-.PHONY : CMakeFiles/snake.dir/getchar.c.o.requires
+.PHONY : CMakeFiles/snake.dir/getchar.cpp.o.requires
 
-CMakeFiles/snake.dir/getchar.c.o.provides: CMakeFiles/snake.dir/getchar.c.o.requires
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/getchar.c.o.provides.build
-.PHONY : CMakeFiles/snake.dir/getchar.c.o.provides
+CMakeFiles/snake.dir/getchar.cpp.o.provides: CMakeFiles/snake.dir/getchar.cpp.o.requires
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/getchar.cpp.o.provides.build
+.PHONY : CMakeFiles/snake.dir/getchar.cpp.o.provides
 
-CMakeFiles/snake.dir/getchar.c.o.provides.build: CMakeFiles/snake.dir/getchar.c.o
-
-
-CMakeFiles/snake.dir/main.c.o: CMakeFiles/snake.dir/flags.make
-CMakeFiles/snake.dir/main.c.o: /home/ahaoozhang/dev_code/snake/src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ahaoozhang/dev_code/snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/snake.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/snake.dir/main.c.o   -c /home/ahaoozhang/dev_code/snake/src/main.c
-
-CMakeFiles/snake.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/snake.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ahaoozhang/dev_code/snake/src/main.c > CMakeFiles/snake.dir/main.c.i
-
-CMakeFiles/snake.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/snake.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ahaoozhang/dev_code/snake/src/main.c -o CMakeFiles/snake.dir/main.c.s
-
-CMakeFiles/snake.dir/main.c.o.requires:
-
-.PHONY : CMakeFiles/snake.dir/main.c.o.requires
-
-CMakeFiles/snake.dir/main.c.o.provides: CMakeFiles/snake.dir/main.c.o.requires
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/main.c.o.provides.build
-.PHONY : CMakeFiles/snake.dir/main.c.o.provides
-
-CMakeFiles/snake.dir/main.c.o.provides.build: CMakeFiles/snake.dir/main.c.o
+CMakeFiles/snake.dir/getchar.cpp.o.provides.build: CMakeFiles/snake.dir/getchar.cpp.o
 
 
-CMakeFiles/snake.dir/snake.c.o: CMakeFiles/snake.dir/flags.make
-CMakeFiles/snake.dir/snake.c.o: /home/ahaoozhang/dev_code/snake/src/snake.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ahaoozhang/dev_code/snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/snake.dir/snake.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/snake.dir/snake.c.o   -c /home/ahaoozhang/dev_code/snake/src/snake.c
+CMakeFiles/snake.dir/main.cpp.o: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/main.cpp.o: /home/ahaoozhang/dev_code/snake/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ahaoozhang/dev_code/snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/snake.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/snake.dir/main.cpp.o -c /home/ahaoozhang/dev_code/snake/src/main.cpp
 
-CMakeFiles/snake.dir/snake.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/snake.dir/snake.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ahaoozhang/dev_code/snake/src/snake.c > CMakeFiles/snake.dir/snake.c.i
+CMakeFiles/snake.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/snake.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahaoozhang/dev_code/snake/src/main.cpp > CMakeFiles/snake.dir/main.cpp.i
 
-CMakeFiles/snake.dir/snake.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/snake.dir/snake.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ahaoozhang/dev_code/snake/src/snake.c -o CMakeFiles/snake.dir/snake.c.s
+CMakeFiles/snake.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahaoozhang/dev_code/snake/src/main.cpp -o CMakeFiles/snake.dir/main.cpp.s
 
-CMakeFiles/snake.dir/snake.c.o.requires:
+CMakeFiles/snake.dir/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/snake.dir/snake.c.o.requires
+.PHONY : CMakeFiles/snake.dir/main.cpp.o.requires
 
-CMakeFiles/snake.dir/snake.c.o.provides: CMakeFiles/snake.dir/snake.c.o.requires
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/snake.c.o.provides.build
-.PHONY : CMakeFiles/snake.dir/snake.c.o.provides
+CMakeFiles/snake.dir/main.cpp.o.provides: CMakeFiles/snake.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/snake.dir/main.cpp.o.provides
 
-CMakeFiles/snake.dir/snake.c.o.provides.build: CMakeFiles/snake.dir/snake.c.o
+CMakeFiles/snake.dir/main.cpp.o.provides.build: CMakeFiles/snake.dir/main.cpp.o
+
+
+CMakeFiles/snake.dir/snake.cpp.o: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/snake.cpp.o: /home/ahaoozhang/dev_code/snake/src/snake.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ahaoozhang/dev_code/snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/snake.dir/snake.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/snake.dir/snake.cpp.o -c /home/ahaoozhang/dev_code/snake/src/snake.cpp
+
+CMakeFiles/snake.dir/snake.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/snake.dir/snake.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahaoozhang/dev_code/snake/src/snake.cpp > CMakeFiles/snake.dir/snake.cpp.i
+
+CMakeFiles/snake.dir/snake.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake.dir/snake.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahaoozhang/dev_code/snake/src/snake.cpp -o CMakeFiles/snake.dir/snake.cpp.s
+
+CMakeFiles/snake.dir/snake.cpp.o.requires:
+
+.PHONY : CMakeFiles/snake.dir/snake.cpp.o.requires
+
+CMakeFiles/snake.dir/snake.cpp.o.provides: CMakeFiles/snake.dir/snake.cpp.o.requires
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/snake.cpp.o.provides.build
+.PHONY : CMakeFiles/snake.dir/snake.cpp.o.provides
+
+CMakeFiles/snake.dir/snake.cpp.o.provides.build: CMakeFiles/snake.dir/snake.cpp.o
 
 
 # Object files for target snake
 snake_OBJECTS = \
-"CMakeFiles/snake.dir/getchar.c.o" \
-"CMakeFiles/snake.dir/main.c.o" \
-"CMakeFiles/snake.dir/snake.c.o"
+"CMakeFiles/snake.dir/getchar.cpp.o" \
+"CMakeFiles/snake.dir/main.cpp.o" \
+"CMakeFiles/snake.dir/snake.cpp.o"
 
 # External object files for target snake
 snake_EXTERNAL_OBJECTS =
 
-snake: CMakeFiles/snake.dir/getchar.c.o
-snake: CMakeFiles/snake.dir/main.c.o
-snake: CMakeFiles/snake.dir/snake.c.o
+snake: CMakeFiles/snake.dir/getchar.cpp.o
+snake: CMakeFiles/snake.dir/main.cpp.o
+snake: CMakeFiles/snake.dir/snake.cpp.o
 snake: CMakeFiles/snake.dir/build.make
 snake: CMakeFiles/snake.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ahaoozhang/dev_code/snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable snake"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ahaoozhang/dev_code/snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable snake"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/snake.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -151,9 +151,9 @@ CMakeFiles/snake.dir/build: snake
 
 .PHONY : CMakeFiles/snake.dir/build
 
-CMakeFiles/snake.dir/requires: CMakeFiles/snake.dir/getchar.c.o.requires
-CMakeFiles/snake.dir/requires: CMakeFiles/snake.dir/main.c.o.requires
-CMakeFiles/snake.dir/requires: CMakeFiles/snake.dir/snake.c.o.requires
+CMakeFiles/snake.dir/requires: CMakeFiles/snake.dir/getchar.cpp.o.requires
+CMakeFiles/snake.dir/requires: CMakeFiles/snake.dir/main.cpp.o.requires
+CMakeFiles/snake.dir/requires: CMakeFiles/snake.dir/snake.cpp.o.requires
 
 .PHONY : CMakeFiles/snake.dir/requires
 

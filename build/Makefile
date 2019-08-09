@@ -123,86 +123,86 @@ snake/fast:
 	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/build
 .PHONY : snake/fast
 
-getchar.o: getchar.c.o
+getchar.o: getchar.cpp.o
 
 .PHONY : getchar.o
 
 # target to build an object file
-getchar.c.o:
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/getchar.c.o
-.PHONY : getchar.c.o
+getchar.cpp.o:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/getchar.cpp.o
+.PHONY : getchar.cpp.o
 
-getchar.i: getchar.c.i
+getchar.i: getchar.cpp.i
 
 .PHONY : getchar.i
 
 # target to preprocess a source file
-getchar.c.i:
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/getchar.c.i
-.PHONY : getchar.c.i
+getchar.cpp.i:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/getchar.cpp.i
+.PHONY : getchar.cpp.i
 
-getchar.s: getchar.c.s
+getchar.s: getchar.cpp.s
 
 .PHONY : getchar.s
 
 # target to generate assembly for a file
-getchar.c.s:
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/getchar.c.s
-.PHONY : getchar.c.s
+getchar.cpp.s:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/getchar.cpp.s
+.PHONY : getchar.cpp.s
 
-main.o: main.c.o
+main.o: main.cpp.o
 
 .PHONY : main.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/main.c.o
-.PHONY : main.c.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-main.i: main.c.i
+main.i: main.cpp.i
 
 .PHONY : main.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/main.c.i
-.PHONY : main.c.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-main.s: main.c.s
+main.s: main.cpp.s
 
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/main.c.s
-.PHONY : main.c.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/main.cpp.s
+.PHONY : main.cpp.s
 
-snake.o: snake.c.o
+snake.o: snake.cpp.o
 
 .PHONY : snake.o
 
 # target to build an object file
-snake.c.o:
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/snake.c.o
-.PHONY : snake.c.o
+snake.cpp.o:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/snake.cpp.o
+.PHONY : snake.cpp.o
 
-snake.i: snake.c.i
+snake.i: snake.cpp.i
 
 .PHONY : snake.i
 
 # target to preprocess a source file
-snake.c.i:
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/snake.c.i
-.PHONY : snake.c.i
+snake.cpp.i:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/snake.cpp.i
+.PHONY : snake.cpp.i
 
-snake.s: snake.c.s
+snake.s: snake.cpp.s
 
 .PHONY : snake.s
 
 # target to generate assembly for a file
-snake.c.s:
-	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/snake.c.s
-.PHONY : snake.c.s
+snake.cpp.s:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/snake.cpp.s
+.PHONY : snake.cpp.s
 
 # Help Target
 help:
