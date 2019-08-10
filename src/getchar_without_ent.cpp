@@ -8,7 +8,8 @@
  * 不输入回车即读取字符
  */
 
-#include"snake.h"
+#include "getchar_without_ent.h"
+
 static struct termios oldt;
 
 //restore terminal settings

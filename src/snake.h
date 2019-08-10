@@ -1,60 +1,65 @@
-/*************************************************************************
-*File Name: snake.h
-*Author: AHAOAHA
-*mail: ahaoaha_@outlook.com
-*Created Time: Tue 18 Dec 2018 10:52:11 AM CST
- ************************************************************************/
+/*************************************************
+ * Copyright(C) 2016-2019. All right reserved.
+ * 
+ * Filename: game.h
+ * Author: ahaoozhang
+ * Date: 2019-08-09 21:05:29 (星期五)
+ * Describe: 
+ *************************************************/
 
-#pragma once
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
-#include<assert.h>
-#include<unistd.h>
-#include<wait.h>
-#include<pthread.h>
-#include <termios.h>
-#include<sys/stat.h>
-#include<sys/types.h>
-#include<fcntl.h>
+#ifndef __SNAKE_H__
+#define __SNAKE_H__
 
-#define ROW 28//行
-#define COL 104//列
-//#define ROW 10
-//#define COL 10
+#include "background.h"
+#include "common.h"
+#include <list>
+#include <time.h>
 
-#define U 1//带表蛇的状态 up
-#define D 2//down
-#define L 3//Left
-#define R 4//right
 
-typedef struct pos
-{
-  int _x;
-  int _y;
-}pos;
 
-typedef struct snake_node//创建蛇身结构体
-{
-  int _x;
-  int _y;
-  struct snake_node *_next;
-}snake_node;
+namespace AHAOAHA {
 
-void init_border();//初始化游戏边界
-void print();//打印函数
-int game();//游戏主体函数
-snake_node* create_snake();//创建蛇身
-void create_food();//创建食物
-void snake_move();//移动蛇身
-void move_up();
-void move_down();
-void move_right();
-void move_left();
-void control_snake();
-void grow_up();
-void insert_head(struct pos pos);
+    class Snake {
+        private:
 
-void restore_terminal_settings(void);
-void disable_terminal_return(void);
+            const int Up = 1;
+            const int Down = 2;
+            const int Left = 3;
+            const int Right = 4;
 
+        private:
+
+            struct SnBody {
+                int _currst;    //当前状态
+                std::list<Pos> _snbody; //蛇身链表
+            };
+
+        private:
+            bool init_snakebody();
+            bool push_snbody(const struct Pos& pos);
+
+        public:
+            enum GAME_STATUS {
+                RUN,
+                QUIT
+            };
+
+        public:
+            Snake(unsigned int row, unsigned int col)
+                :_bg(row, col), _st(RUN)
+            {}
+            ~Snake() {}
+
+
+            bool init();
+            const GAME_STATUS& get_status() const { return _st; }
+            BackGround& get_background() { return _bg; }
+
+        private:
+            BackGround _bg;
+            SnBody _sn;
+            GAME_STATUS _st;
+    };
+}
+
+#endif // snake.h

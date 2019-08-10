@@ -1,6 +1,6 @@
-#include"snake.h"
-int main()
-{
-  game();
-  return 0;
+#include "game.h"
+
+int main() {
+    AHAOAHA::GameRun();
+    return 0;
 }
