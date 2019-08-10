@@ -18,5 +18,7 @@
 #include <termios.h>
 #include <stdlib.h>
 
+void restore_terminal_settings(void);
+void disable_terminal_return(void);
 
 #endif //getchar_without_ent.h

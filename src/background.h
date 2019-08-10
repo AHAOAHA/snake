@@ -12,6 +12,7 @@
 #include <vector>
 #include <iostream>
 #include "common.h"
+#include <assert.h>
 
 namespace AHAOAHA { //
 
@@ -25,11 +26,15 @@ namespace AHAOAHA { //
             bool init_sidebar();
             bool create_food();
             bool echo();
-            bool push_snbody(const struct Pos& pos);
+            bool set_snbody(const struct Pos& pos);
             unsigned int get_row() const { return _row; }
             unsigned int get_col() const { return _col; }
 
             bool pos_ok(const struct Pos& pos);
+            bool is_food(const Pos& pos);
+            bool is_sidebar(const Pos& pos);
+            bool move_snbody(const Pos& insert, const Pos& del);
+            bool grow_snbody(const Pos& pos);
         private:
             const unsigned int _row;
             const unsigned int _col;

@@ -95,10 +95,41 @@ bool AHAOAHA::BackGround::pos_ok(const struct Pos& pos) {
 }
 
 
-bool AHAOAHA::BackGround::push_snbody(const struct Pos& pos) {
+bool AHAOAHA::BackGround::set_snbody(const struct Pos& pos) {
     if (!pos_ok(pos)) {
         return false;
     }
 
     _bgv[pos._row][pos._col] = SNAKEBODY;
+    return true;
+}
+
+bool AHAOAHA::BackGround::move_snbody(const Pos& insert, const Pos& del) {
+    if (!pos_ok(insert)) {
+        return false;
+    }
+
+    _bgv[insert._row][insert._col] = SNAKEBODY;
+    _bgv[del._row][del._col] = EMPTYSPACE;
+    return true;
+}
+
+bool AHAOAHA::BackGround::is_food(const Pos& pos) {
+    if (!pos_ok(pos)) {
+        assert(0);
+    }
+    return _bgv[pos._row][pos._col] == FOOD;
+}
+
+bool AHAOAHA::BackGround::is_sidebar(const Pos& pos) {
+    if (!pos_ok(pos)) {
+        assert(0);
+    }
+
+    return _bgv[pos._row][pos._col] == SIDEBAR;
+}
+
+bool AHAOAHA::BackGround::grow_snbody(const Pos& pos) {
+    set_snbody(pos);
+    create_food();
 }
