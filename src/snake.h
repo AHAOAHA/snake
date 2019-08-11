@@ -11,7 +11,7 @@
 #define __SNAKE_H__
 
 #include "background.h"
-//#include "getchar_without_ent.h"
+#include "getchar_without_ent.h"
 #include "common.h"
 #include <list>
 #include <time.h>
@@ -23,7 +23,6 @@ namespace AHAOAHA {
 
     class Snake {
         private:
-
             struct SnBody {
                 std::atomic<int> _currst;    //当前状态
                 std::list<Pos> _snbody; //蛇身链表
@@ -49,7 +48,7 @@ namespace AHAOAHA {
                 RUN,
                 CHANGE_POINT,
                 MOVE,
-                ECHO,
+                ECHOING,
                 QUIT
             };
 
@@ -67,6 +66,7 @@ namespace AHAOAHA {
             bool change_point(int val);
             bool exit();
             bool GameRun();
+            std::atomic<GAME_STATUS>& get_status();
 
         private:
             BackGround _bg;

@@ -52,8 +52,7 @@ bool AHAOAHA::Snake::push_snbody(const struct Pos& pos) {
 }
 
 bool AHAOAHA::Snake::change_point(int val) {
-    int exp = _sn._currst.load(); //exp与状态永远相等 使用val替换之
-    _sn._currst.compare_exchange_strong(exp, val);
+    _sn._currst.store(val);
     return true;
 }
 
@@ -67,9 +66,10 @@ bool AHAOAHA::Snake::exit() {
 void* AHAOAHA::Snake::echo_handle(void* arg) {
     Snake* self = (Snake*)arg;
 
+    //only STATUS_RUN apply to echo
     GAME_STATUS exp = RUN;
     while(1) {
-        while(!self->_st.compare_exchange_strong(exp, ECHO)) {
+        while(!self->_st.compare_exchange_strong(exp, ECHOING)) {
             exp = RUN;
         }
 
@@ -82,7 +82,6 @@ void* AHAOAHA::Snake::echo_handle(void* arg) {
 
 
 bool AHAOAHA::Snake::init_echor() {
-    GAME_STATUS exp = RUN;
     //关闭光标显示 在echo退出时打开
     HIDE_CURSOR();
 
@@ -94,21 +93,25 @@ bool AHAOAHA::Snake::init_echor() {
 void* AHAOAHA::Snake::move_handle(void* arg) {
     Snake* self = (Snake*)arg;
 
-    while(self->_st.load() != QUIT) {
-        GAME_STATUS exp = RUN;
+    GAME_STATUS exp = RUN;
+    //only STATUS_RUN apply move
+    while(1) {
         while(!self->_st.compare_exchange_strong(exp, MOVE)) {
             exp = RUN;
         }
 
-        if(!self->move()) {
+        if(self->move() == false) {
             self->_st.store(QUIT);
-            return NULL;
+            break;
         }
         self->_st.store(RUN);
-        usleep(100000); //game level
+        usleep(100000);  //snake run level
     }
-
     return NULL;
+}
+
+std::atomic<AHAOAHA::Snake::GAME_STATUS>& AHAOAHA::Snake::get_status() {
+    return _st;
 }
 
 bool AHAOAHA::Snake::init_mover() {
@@ -122,43 +125,46 @@ bool AHAOAHA::Snake::init_mover() {
 bool AHAOAHA::Snake::move() {
     Pos curr = _sn._snbody.front(); //get head
     Pos next = curr;
-    switch(_sn._currst) {
+    switch(_sn._currst.load()) {
         case Up:
-            next._row++;
-            break;
-        case Down:
             next._row--;
             break;
+        case Down:
+            next._row++;
+            break;
         case Left:
-            next._col++;
+            next._col--;
             break;
         case Right:
-            next._col--;
+            next._col++;
             break;
         default:
             break;
     }
     if (_bg.is_food(next)) {
-        _bg.grow_snbody(next);
-    } else if (_bg.is_sidebar(next)) {
+        _bg.set_pos(next, SNAKEBODY);
+        _sn._snbody.push_front(next);
+        _bg.create_food();
+    } else if (_bg.is_sidebar(next)) {  //game over
         return false;
     } else {
-        _bg.move_snbody(next, _sn._snbody.back());
+        _bg.set_pos(next, SNAKEBODY);
+        _bg.set_pos(_sn._snbody.back(), EMPTYSPACE);
+        _sn._snbody.push_front(next);
+        _sn._snbody.pop_back();
     }
-    _sn._snbody.pop_back();
-    _sn._snbody.push_front(next);
     return true;
 }
 
 //===================================================================
 bool AHAOAHA::Snake::GameRun() {
-    //控制键盘输入 原子改变方向状态
-    //disable_terminal_return();
     char input = '0';
-    while(input != 'q' && input != 'Q') {
+    //控制键盘输入 原子改变方向状态
+    disable_terminal_return();
+    while(_st.load() != QUIT) {
         int exp_point = get_currpoint();
+        // if no input will block
         input = getchar();
-        printf("input : %c\n", input);
         switch(input) {
             case 'w':
             case 'W':
@@ -178,7 +184,9 @@ bool AHAOAHA::Snake::GameRun() {
                 break;
             case 'q':
             case 'Q':
-                this->exit();
+                    _st.store(QUIT);
+                break;
+
             default:
                 break;
         }

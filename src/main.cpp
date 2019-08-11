@@ -17,12 +17,18 @@ int main() {
 
     printf("ROW: %d; COL: %d\n", ROW, COL);
 
-    //game init
+    // game init
     AHAOAHA::Snake sn(ROW, COL);
+    // make echor mover
     sn.init();
 
 
     //game run
+    AHAOAHA::Snake::GAME_STATUS exp = AHAOAHA::Snake::QUIT;
+
+    //getinput change point
     sn.GameRun();
+
+    sn.exit();
     return 0;
 }

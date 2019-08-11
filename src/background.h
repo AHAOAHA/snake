@@ -32,9 +32,11 @@ namespace AHAOAHA { //
 
             bool pos_ok(const struct Pos& pos);
             bool is_food(const Pos& pos);
+            bool pos_empty(const Pos& pos);
             bool is_sidebar(const Pos& pos);
             bool move_snbody(const Pos& insert, const Pos& del);
             bool grow_snbody(const Pos& pos);
+            bool set_pos(const Pos& pos, int val);
         private:
             const unsigned int _row;
             const unsigned int _col;

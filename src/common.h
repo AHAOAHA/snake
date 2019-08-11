@@ -10,6 +10,11 @@
 #ifndef __COMMON_H__
 #define __COMMON_H__
 
+#define EMPTYSPACE 0
+#define SIDEBAR 1
+#define SNAKEBODY 2
+#define FOOD 3
+
 #define CLEAR() printf("\033[2J")   //清屏
 #define HIDE_CURSOR() printf("\033[?25l")   //隐藏光标
 #define SHOW_CURSOR() printf("\033[?25h")   //显示光标

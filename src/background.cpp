@@ -8,12 +8,6 @@
  *************************************************/
 #include "background.h"
 
-#define EMPTYSPACE 0
-#define SIDEBAR 1
-#define SNAKEBODY 2
-#define FOOD 3
-
-
 bool AHAOAHA::BackGround::init() {
     for(int row = 0; row < _row; ++row) {
         std::vector<int> tmp_v;
@@ -47,9 +41,13 @@ bool AHAOAHA::BackGround::create_food() {
     do {
         f_pos._row = rand() % _row;
         f_pos._col = rand() % _col;
-    } while(!pos_ok(f_pos));
+    } while(!pos_ok(f_pos) || !pos_empty(f_pos));
 
     _bgv[f_pos._row][f_pos._col] = FOOD;
+}
+
+bool AHAOAHA::BackGround::pos_empty(const Pos& pos) {
+    return _bgv[pos._row][pos._col] == EMPTYSPACE;
 }
 
 bool AHAOAHA::BackGround::echo() {
@@ -88,7 +86,7 @@ bool AHAOAHA::BackGround::echo() {
 }
 
 bool AHAOAHA::BackGround::pos_ok(const struct Pos& pos) {
-    if ((((pos._row < _row) && (pos._row > 0)) && ((pos._col < _col) && (pos._col > 0))) && _bgv[pos._row][pos._col] == EMPTYSPACE) {
+    if (((pos._row < _row) && (pos._row > 0)) && ((pos._col < _col) && (pos._col > 0))) {
         return true;
     }
     return false;
@@ -104,6 +102,15 @@ bool AHAOAHA::BackGround::set_snbody(const struct Pos& pos) {
     return true;
 }
 
+bool AHAOAHA::BackGround::set_pos(const Pos& pos, int val) {
+    if (!pos_ok(pos)) {
+        return false;
+    }
+
+    _bgv[pos._row][pos._col] = val;
+
+}
+
 bool AHAOAHA::BackGround::move_snbody(const Pos& insert, const Pos& del) {
     if (!pos_ok(insert)) {
         return false;
@@ -115,17 +122,10 @@ bool AHAOAHA::BackGround::move_snbody(const Pos& insert, const Pos& del) {
 }
 
 bool AHAOAHA::BackGround::is_food(const Pos& pos) {
-    if (!pos_ok(pos)) {
-        assert(0);
-    }
     return _bgv[pos._row][pos._col] == FOOD;
 }
 
 bool AHAOAHA::BackGround::is_sidebar(const Pos& pos) {
-    if (!pos_ok(pos)) {
-        assert(0);
-    }
-
     return _bgv[pos._row][pos._col] == SIDEBAR;
 }
 
