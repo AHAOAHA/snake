@@ -1,5 +1,8 @@
 # snake
-`Snake` is a small bash game.
+
+[![Build Status](https://travis-ci.com/AHAOAHA/snake.svg?branch=master)](https://travis-ci.com/AHAOAHA/snake)
+
+`Snake` is a small shell game.
 
 #### how to play?
 1. `git clone https://github.com/AHAOAHA/snake.git`: this is for master branch.
