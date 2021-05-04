@@ -21,6 +21,7 @@ bool AHAOAHA::Snake::init() {
 
     //mover_init
     init_mover();
+    return true;
 }
 
 bool AHAOAHA::Snake::init_snakebody() {
@@ -43,6 +44,7 @@ bool AHAOAHA::Snake::init_snakebody() {
 
     //change status
     _st.store(RUN);
+    return true;
 }
 
 bool AHAOAHA::Snake::push_snbody(const struct Pos& pos) {

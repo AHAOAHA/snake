@@ -35,7 +35,7 @@ bool AHAOAHA::BackGround::init_sidebar() {
     return true;
 }
 
-bool AHAOAHA::BackGround::create_food() {
+void AHAOAHA::BackGround::create_food() {
     Pos f_pos;
     srand(time(NULL));
     do {
@@ -108,7 +108,7 @@ bool AHAOAHA::BackGround::set_pos(const Pos& pos, int val) {
     }
 
     _bgv[pos._row][pos._col] = val;
-
+    return true;
 }
 
 bool AHAOAHA::BackGround::move_snbody(const Pos& insert, const Pos& del) {
@@ -129,7 +129,7 @@ bool AHAOAHA::BackGround::is_sidebar(const Pos& pos) {
     return _bgv[pos._row][pos._col] == SIDEBAR;
 }
 
-bool AHAOAHA::BackGround::grow_snbody(const Pos& pos) {
+void AHAOAHA::BackGround::grow_snbody(const Pos& pos) {
     set_snbody(pos);
     create_food();
 }

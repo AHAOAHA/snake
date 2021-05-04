@@ -24,7 +24,7 @@ namespace AHAOAHA { //
 
             bool init();
             bool init_sidebar();
-            bool create_food();
+            void create_food();
             bool echo();
             bool set_snbody(const struct Pos& pos);
             unsigned int get_row() const { return _row; }
@@ -35,7 +35,7 @@ namespace AHAOAHA { //
             bool pos_empty(const Pos& pos);
             bool is_sidebar(const Pos& pos);
             bool move_snbody(const Pos& insert, const Pos& del);
-            bool grow_snbody(const Pos& pos);
+            void grow_snbody(const Pos& pos);
             bool set_pos(const Pos& pos, int val);
         private:
             const unsigned int _row;
